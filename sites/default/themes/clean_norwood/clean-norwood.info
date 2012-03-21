@@ -1,0 +1,14 @@
+; $Id: clean-norwood.info,v 1.13 2011/05/29 23:37:00 andyb Exp $
+
+name = Clean_Norwood
+description = Child theme of Clean - For Norwood Feast
+core = 6.x
+engine = phptemplate
+stylesheets[all][] = css/style.css
+base theme = clean
+regions[left] = Left sidebar
+regions[right] = Right sidebar
+regions[content] = Content
+regions[header] = Header
+regions[footer] = Footer
+regions[masthead] = Banner Masthead

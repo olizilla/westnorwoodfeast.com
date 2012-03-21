@@ -1,0 +1,14 @@
+; $Id: plugin_manager.info,v 1.2.2.6 2009/05/22 05:11:50 joshuarogers Exp $
+name = Plugin Manager
+description = Enables the automated installation of modules and themes from drupal.org
+core = 6.x
+php = 5
+package = Administration
+dependencies[] = update
+
+; Information added by drupal.org packaging script on 2009-09-10
+version = "6.x-1.10"
+core = "6.x"
+project = "plugin_manager"
+datestamp = "1252602150"
+

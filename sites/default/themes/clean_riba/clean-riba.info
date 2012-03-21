@@ -1,0 +1,8 @@
+; $Id: Clean_RIBA.info,v 1.0 2010/01/27 00:31:00 andyb Exp $
+
+name = Clean_RIBA
+description = Child theme of Clean - For RIBA Space Makers Forgotten Spaces Project
+core = 6.x
+engine = phptemplate
+stylesheets[all][] = css/style.css
+base theme = clean

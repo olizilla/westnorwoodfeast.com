@@ -1,0 +1,14 @@
+; $Id: clean_liquid.info,v 1.1.2.1.2.1 2009/12/10 12:35:27 psynaptic Exp $
+
+name = Clean Liquid
+description = Liquid version of Clean theme.
+base theme = clean
+core = 6.x
+stylesheets[all][] = css/layout.css
+
+; Information added by drupal.org packaging script on 2010-04-22
+version = "6.x-2.0-beta3"
+core = "6.x"
+project = "clean"
+datestamp = "1271896505"
+

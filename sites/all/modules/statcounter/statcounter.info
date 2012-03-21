@@ -1,0 +1,12 @@
+; $Id: statcounter.info,v 1.1.4.1 2008/02/19 20:34:23 boombatower Exp $
+name = "Statcounter"
+description = "Provides an integration with StatCounter which logs user activity."
+package = Other
+core = 6.x
+
+; Information added by drupal.org packaging script on 2008-02-19
+version = "6.x-1.0"
+core = "6.x"
+project = "statcounter"
+datestamp = "1203453911"
+

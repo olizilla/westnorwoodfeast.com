@@ -1,0 +1,1557 @@
+/* $Id: style.css,v 1.0 2010/12/08 14:17:00 andyb Exp $ */
+/* this is for custom styles to overide the clean them*/
+
+/*font size spec (use ems not px)*/
+body {
+	font-family:helvetica, arial, sans-serif;
+	font-size:65% !important;
+	color:#333;
+}
+html>body {
+	font-size:62.5% !important;
+}
+body div#header {
+	font-size:1.2em;
+}
+body div#branding {
+	font-size:1.2em;
+	text-align:center;
+}
+body div#navigation {
+	font-size:1.8em;
+}
+body div#console {
+	font-size:1.2em;
+}
+body div#page {
+	font-size:1.2em;
+	line-height:1.5em;
+}
+html>body div#page {
+	font-size:1.4em;
+}
+body div#footer {
+	font-size:1.2em;
+}
+/*end font size spec*/
+
+/*page layout overides*/
+body {
+	/*background:#fff url(../images/background2.jpg) repeat-x 0 0;*/
+}
+
+.limiter {
+	width:740px;
+}
+
+#header {
+	padding:2px 0 0px 0;
+	margin:0;
+	background-color:#000;
+	color:#fff;
+}
+
+#header .block {
+	display:inline;
+	margin:0;
+	padding:0;
+}
+
+#top-blocks {
+	min-height:240px;
+	background:transparent url(../images/background-header-july.jpg) no-repeat top center;
+}
+
+#branding {
+}
+
+#searchetc {
+}
+
+#navigation {
+	/*background-color:#211B15;*/
+}
+/*html>body #navigation {
+	background:transparent url(../images/bars-background.png) repeat 0 0;
+}*/
+
+#console {
+}
+
+#page {
+}
+
+#content {
+	width:740px !important;
+}
+
+#base-blocks {
+}
+
+#left {
+}
+
+#right {
+}
+
+#footer {
+	clear:both;
+}
+
+/*main page style (h1's etc)*/
+
+a, a:link, a:visited {
+	color:#f08b1d;
+}
+a:hover {
+	color:#3473A1 !important;
+	/*text-decoration:underline;*/
+}
+h1, h2, h3, h4, h5, h6 {
+	/*color:#467D26;*/
+	/*color:#1C4183;*/
+	color:#7C7067;
+}
+h1, h2, h3 {
+	font-weight:normal;
+}
+h3 {
+	font-size:1.2em !important;
+}
+h4 {
+	font-weight:bold;
+}
+label, .label {
+	color:#000;
+}
+label { 
+	font-weight:bold;
+}
+
+.page-title {
+	margin-bottom:16px;
+	padding-bottom:0;
+}
+
+.arrow {
+
+}
+/*end of main page styles*/
+
+/*admin*/
+
+#admin-menu a:hover {
+	color:#f08b1d !important;
+}
+.view .views-admin-links-hover .links li a, .view .views-admin-links .links li a {
+	color:#fff !important;
+}
+
+/*end of admin*/
+
+/*site headers*/
+
+h1#site-name-header {
+	float:left;
+	width:345px;
+	height:180px;
+	margin:0 auto 0 auto;
+	padding:0;
+	background:transparent url(../images/logo-3.gif) no-repeat 0 0;
+}
+h1#site-name-header a {
+	display:block;
+	width:345px;
+	height:180px;
+}
+html>body h1#site-name-header {
+	background:transparent url(../images/logo-3.png) no-repeat 0 0;
+}
+h1#site-name-header span {
+	display:none;
+}
+
+/*end of site header*/
+
+/*masthead*/
+
+#masthead {
+	float:right;
+	padding-top:28px;
+	text-align:left;
+}
+#masthead .block {
+	margin:0;
+	padding:0;
+}
+#masthead ul {
+	display:block;
+	list-style-type:none;
+	font-size:1.4em;
+	width:276px;
+	margin:0;
+	padding:0;
+}
+#masthead ul li {
+	display:block;
+	float:left;
+	margin:0;
+	padding:0;
+}
+#masthead ul li a {
+	display:inline-block;
+	margin:0 0 4px 4px;
+	background:#333;
+	color:#fff;
+	width:86px;
+	height:26px;
+	padding:8px 6px 6px 42px;
+}
+#masthead ul li a.bt-twitter {
+	background:transparent url(../images/tw-button.png) no-repeat 0 0;
+}
+#masthead ul li a.bt-facebook {
+	background:transparent url(../images/fb-button.png) no-repeat 0 0;
+}
+#masthead ul li a.bt-youtube {
+	background:transparent url(../images/yt-button.png) no-repeat 0 0;
+}
+#masthead ul li a.bt-flickr {
+	background:transparent url(../images/fk-button.png) no-repeat 0 0;
+}
+#masthead ul li a.bt-feed {
+	background:transparent url(../images/fd-button.png) no-repeat 0 0;
+}
+#masthead ul li a:hover {
+	text-decoration:none;
+	color:#fff !important;
+	background-position:0 -40px;
+}
+#masthead ul li a span {
+}
+
+/*end of masthead*/
+
+/*custom login menu*/
+.block-custom_login {
+	width:514px;
+	float:left;
+	/*font-size:0.9em;*/
+}
+#custom-user-block {
+	text-align:left;
+}
+#custom-user-block ul {
+	display:block;
+	list-style-type:none;
+	margin:0;
+	padding:2px 0 0 0;
+}
+#custom-user-block ul li {
+	list-style-type:none;
+	display:inline;
+}
+#custom-user-block ul li a {
+	display:inline-block;
+	margin:0 0 2px 8px;
+	padding:0;
+}
+#custom-user-block ul li a:hover {
+	margin:0 0 0 8px;
+	border-bottom:2px solid #f08b1d;
+	text-decoration:none !important;
+	color:#f08b1d !important;
+}
+#custom-user-block ul li a.active {
+	border-bottom:2px solid #fff;
+	margin:0 0 0 8px;
+}
+	
+/*end of custom login menu*/
+
+/*search box*/
+
+#search-theme-form {
+	margin:0 0 0 auto;
+	padding:0;
+	width:226px;
+	text-align:right;
+	float:right;
+}
+html>body #search-theme-form {
+	float:none;
+}
+#search-theme-form #search {
+	margin:0;
+	padding:0;
+	font-size:0.8em;
+}
+#search-theme-form div {
+	margin-bottom:0;
+	padding-bottom:0;
+}
+#search-theme-form input {
+	display:inline-block;
+	margin-bottom:0;
+	margin-top:0;
+	padding-bottom:3px;
+	padding-top:3px;
+}
+#search-theme-form input.form-text {
+	background-color:#000;
+	color:#fff;
+	border:1px solid #ccc;
+	width:150px;
+	min-width:100px;
+}
+#search-theme-form input.form-submit {
+	margin-right:0;
+}
+
+/*end of search box*/
+
+/*navigation menus*/
+#navigation .limiter {
+	margin-top:6px;
+	padding-bottom:0;
+}
+ul.primary-links {
+	background:none;
+	display:block;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	text-align:center;
+}
+ul.primary-links li {
+	display:inline !important;
+	margin:0;
+	padding:0;
+}
+ul.primary-links li a {
+	display:inline-block !important;
+	padding:5px 10px 8px 10px !important;
+	margin:0 1px 0 1px;
+	background-color:#333 !important;
+	color:#fff !important;
+	text-decoration:none;
+	/*height:20px;*/
+}
+ul.primary-links li a:hover {
+	/*border-bottom:8px solid #f08b1d;
+	margin-bottom:0;*/
+	background-color:#f08b1d !important;
+	text-decoration:none;
+}
+ul.primary-links li.active a, ul.primary-links li.active-trail a {
+	text-decoration:none;
+	color:#f08b1d !important;
+	background-color:#fff !important;
+	/*border-bottom:8px solid #fff;
+	margin-bottom:0;*/
+}
+ul.primary-links li.active a:hover, ul.primary-links li.active-trail a:hover {
+	color:#f08b1d !important;
+}
+/*ul.primary-links li.active-trail a {
+	text-decoration:none;
+	color:#f08b1d !important;
+	border-bottom:8px solid #fff;
+	margin-bottom:0;
+}*/
+
+ul.secondary-links {
+	background:none;
+	margin-left:0px;
+}
+
+ul.links li a:link, ul.links li a:visited, ul.links li a:active {
+	display:inline-block;
+	background-color:#333;
+	color:#fff;
+	padding:2px 5px;
+	line-height:1.5
+}
+ul.links li.active a {
+	background-color:#eee;
+	color:#f08b1d;
+	text-decoration:none;
+}
+ul.links li a:hover {
+	/*color:#b8b308;*/
+	color:#fff !important;
+	background-color:#f08b1d;
+	text-decoration:none;
+}
+
+#tabs a {
+	color:#fff;
+}
+#tabs a.active {
+	color:#f08b1d;
+}
+ul.tabs, .tabs li, ul.buttons, .buttons li {
+	list-style-type:none;
+	margin-top:0;
+	margin-bottom:0;
+}
+ul.tabs, ul.buttons {
+	display:block;
+	margin:0 0 8px 0;
+	padding:0;
+	min-height:20px;
+}
+ul.buttons {
+	/*min-height:32px;*/
+}
+ul.tabs li, ul.buttons li {
+	margin-left:0;
+	margin-right:3px;
+	padding:0;
+}
+ul.tabs li a {
+	margin-right:0;
+}
+.tabs a, .buttons a, a.button {
+	display:inline-block;
+	color:#fff !important;
+	text-decoration:none;
+	background-color:#333 !important;
+	padding:2px 5px !important;
+}
+.tabs a:hover, a.button:hover {
+	color:#fff !important;
+	background-color:#f08b1d !important;
+	text-decoration:none;
+}
+.tabs a.active, .tabs a.active-trail {
+	background-color:#eee !important;
+	color:#f08b1d !important;
+}
+ul.buttons li li {
+	width:100% !important;
+}
+/*end of navigation links*/
+
+/*panels code*/
+.panel-separator {
+	margin-bottom:16px;
+}
+
+.panel-clear-pane {
+	margin-bottom:16px;
+}
+
+
+
+/*lightbox*/
+
+#lightbox #bottomNavClose {
+/*	background:none !important;
+/*	position:absolute;
+	top:-16px;
+	right:-16px;*/
+}
+
+/*end of lightbox*/
+
+/*custom login (/login)*/
+#custom-login {
+	width:440px;
+	float:left;
+}
+#custom-login input.form-text {
+	width:432px;
+}
+
+#custom-register {
+	width:440px;
+	margin:0 0 0 480px;
+}
+#custom-register input.form-text {
+	width:432px;
+}
+.description {
+	margin-top:6px !important;
+}
+/*end of custom login*/
+
+/*helper text*/
+.help {
+	background-color:#eee;
+}
+/*end helper text*/
+
+
+/*input form*/
+
+input.form-submit {
+	/*background:none;*/
+	display:inline-block !important;
+	padding:3px 5px !important;
+	color:#fff;
+	background-color:#333;
+}
+input.form-submit:hover {
+	color:#fff;
+	background-color:#f08b1d;
+}
+input.form-text {
+	min-width:240px;
+}
+input.form-text:active, input.form-text:focus, textarea:focus {
+	background-color:#fffafa;
+}
+input.form-file {
+	background:none !important;
+}
+
+
+/*end input form*/
+
+/*split summary button*/
+.teaser-checkbox {
+	display:none;
+}
+/* end split summary button */
+
+/*table headers (return to pre clean beta 2*/
+
+thead {
+	background-color:#fff;
+	color:#222;
+	border-bottom:3px solid #999;
+}
+th a:link, th a:visited {
+	color:#f08b1d;
+}
+
+/*end of table headers*/
+
+/*brand logos at bottom*/
+
+#brandlogos {
+	margin-bottom:20px;
+	text-align:right;
+	height:80px;
+}
+
+#brandlogos a {
+}
+#brandlogos a span {
+	display:none;
+}
+a#sma-logo {
+	display:inline-block;
+	width:106px;
+	height:68px;
+	background:transparent url(../images/sma.png) no-repeat 0 0;
+}
+a#lambeth-logo {
+	display:inline-block;
+	width:128px;
+	height:45px;
+	background:transparent url(../images/lambeth.png) no-repeat 0 0;
+	margin-top:8px;
+}
+/*end of brand logos at bottom*/
+
+/*home panels*/
+
+#panel-home .panel-region-separator {
+	display:none;
+}
+#panel-home {
+	position:relative;
+}
+#pane-home-images {
+	width:740px;
+	margin-bottom:32px;
+}
+#pane-home-images img {
+	display:block;
+	margin:0 auto 0 0;
+	padding:0;
+}
+#pane-home-text {
+	float:left;
+	width:340px;
+	margin:0 auto 6px 0;
+}
+#pane-home-form {
+	width:340px;
+	margin:0 auto 12px 0;
+}
+#pane-home-form .webform-component-markup p {
+	margin:0;
+	padding:0;
+	font-size:0.8em;
+}
+#pane-home-info {
+	width:auto;
+	margin:0 0 0 auto;
+}
+#pane-this-site {
+	clear:both;
+	float:left;
+	width:340px;
+	/*margin:30px 0 12px auto;*/
+}
+#pane-this-site .node-content, #pane-home-text .node-content {
+	padding-top:0;
+}
+#panel-home .pane-1 {
+	float:right;
+	width:340px;
+	margin-bottom:16px;
+}
+#panel-home .pane-2 {
+	float:left;
+	width:340px;
+	margin-bottom:16px;
+}
+#pane-home-hubs {
+	float:right;
+	width:340px;
+	margin-bottom:16px;
+}
+#pane-home-hubs .view-hubs-of-norwood {
+	width:340px;
+}
+#pane-home-hubs .view-hubs-of-norwood ul li.views-row-2 {
+	margin-right:0 !important;
+}
+#pane-home-hubs .view-hubs-of-norwood ul li.views-row-3 {
+	margin-left:0 !important;
+}
+#pane-home-blog {
+	/*clear:both;*/
+	float:right;
+	width:340px;
+}
+/*end of home panels*/
+
+/*map of west norwood*/
+
+#panel-whats-going-on .pane-1 {
+	margin-top:1em;
+}
+
+#new-item-menu {
+	position:relative;
+	display:none;
+	width:auto;
+	z-index:100;
+	margin:-2px 0 0 0;
+	padding:0;
+	background-color:#e6e6e6;
+}
+ul.buttons li.new-item-link {
+	position:relative;
+	height:21px;
+	overflow:visible;
+	margin-right:0;
+}
+/*li.new-item-link:hover #new-item-menu {
+	display:block;
+}*/
+#panel-whats-going-on {
+}
+#panel-whats-going-on #pane-map-intro-links {
+	margin-bottom:16px;
+	font-size:0.9em;
+}
+#panel-whats-going-on #pane-map-intro-links div a {
+	display:block;
+	padding:8px 10px;
+	text-decoration:none;
+	color:#000;
+}
+#panel-whats-going-on #pane-map-intro-links div a:hover {
+	color:#fff !important;
+}
+#panel-whats-going-on #pane-map-intro-links #map-norwood-desc {
+	float:left;
+	width:220px;
+	margin-right:10px;
+	background-color:#eee;
+}
+#panel-whats-going-on #pane-map-intro-links a#map-norwood-desc:hover {
+	background-color:#7C7067;
+}
+#panel-whats-going-on #pane-map-intro-links #map-norwood-explore {
+	float:left;
+	width:220px;
+	margin-right:10px;
+	background-color:#eee;
+}
+#panel-whats-going-on #pane-map-intro-links a#map-norwood-explore:hover {
+	background-color:#585887;
+}
+#panel-whats-going-on #pane-map-intro-links #map-norwood-add {
+	width:220px;
+	margin-left:500px;
+	background-color:#eee;
+}
+#panel-whats-going-on #pane-map-intro-links a#map-norwood-add:hover {
+	background-color:#9D9D21;
+}
+#new-item-menu li {
+	display:block;
+	float:none;
+	margin:0;
+	padding:0:
+}
+#new-item-menu li a {
+	display:block;
+}
+
+#pane-map-of-norwood {
+	clear:both;
+	width:740px;
+	margin-top:-10px;
+}
+.gmap-popup {
+	font-size:0.8em;
+	line-height:1.6em;
+}
+
+/*end of map of west norwood*/
+
+/*list of west norwood*/
+
+.view-list-of-norwood, .view-user-list-of-norwood, .view-pr-user-list-of-norwood, .view-latest-of-norwood, .view-hubs-of-norwood  {
+	margin:20px 0 0 0;
+	width:740px;
+	font-size:0.9em;
+	line-height:1.5em;
+}
+.view-list-of-norwood .item-list, .view-user-list-of-norwood .item-list, .view-pr-user-list-of-norwood .item-list, .view-latest-of-norwood .item-list, .view-hubs-of-norwood .item-list {
+	clear:both;
+}
+
+.view-list-of-norwood ul, .view-user-list-of-norwood ul, .view-pr-user-list-of-norwood ul, .view-latest-of-norwood ul, .view-hubs-of-norwood ul {
+	display:block;
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+
+.view-list-of-norwood ul li, .view-user-list-of-norwood ul li, .view-pr-user-list-of-norwood ul li, .view-latest-of-norwood ul li, .view-hubs-of-norwood ul li {
+	display:block;
+	float:left;
+	width:140px !important;
+	margin:0 30px 12px 30px;
+	padding:0;
+	list-style-type:none;
+}
+.view-list-of-norwood ul li.views-row-1, .view-list-of-norwood ul li.views-row-5, .view-list-of-norwood ul li.views-row-9, .view-list-of-norwood ul li.views-row-13, .view-list-of-norwood ul li.views-row-17, .view-list-of-norwood ul li.views-row-21, .view-user-list-of-norwood ul li.views-row-1, .view-user-list-of-norwood ul li.views-row-5, .view-user-list-of-norwood ul li.views-row-9, .view-user-list-of-norwood ul li.views-row-13, .view-user-list-of-norwood ul li.views-row-17, .view-user-list-of-norwood ul li.views-row-21, .view-pr-user-list-of-norwood ul li.views-row-1, .view-pr-user-list-of-norwood ul li.views-row-5, .view-pr-user-list-of-norwood ul li.views-row-9, .view-pr-user-list-of-norwood ul li.views-row-13, .view-pr-user-list-of-norwood ul li.views-row-17, .view-pr-user-list-of-norwood ul li.views-row-21, .view-latest-of-norwood ul li.views-row-1, .view-latest-of-norwood ul li.views-row-5, .view-latest-of-norwood ul li.views-row-9, .view-latest-of-norwood ul li.views-row-13, .view-latest-of-norwood ul li.views-row-17, .view-latest-of-norwood ul li.views-row-21, .view-hubs-of-norwood ul li.views-row-1 {
+	margin-left:0;
+	clear:both;
+}
+.view-list-of-norwood ul li.views-row-4, .view-list-of-norwood ul li.views-row-8, .view-list-of-norwood ul li.views-row-12, .view-list-of-norwood ul li.views-row-16, .view-list-of-norwood ul li.views-row-20, .view-list-of-norwood ul li.views-row-24, .view-user-list-of-norwood ul li.views-row-4, .view-user-list-of-norwood ul li.views-row-8, .view-user-list-of-norwood ul li.views-row-12, .view-user-list-of-norwood ul li.views-row-16, .view-user-list-of-norwood ul li.views-row-20, .view-user-list-of-norwood ul li.views-row-24, .view-pr-user-list-of-norwood ul li.views-row-4, .view-pr-user-list-of-norwood ul li.views-row-8, .view-pr-user-list-of-norwood ul li.views-row-12, .view-pr-user-list-of-norwood ul li.views-row-16, .view-pr-user-list-of-norwood ul li.views-row-20, .view-pr-user-list-of-norwood ul li.views-row-24, .view-latest-of-norwood ul li.views-row-4, .view-latest-of-norwood ul li.views-row-8, .view-latest-of-norwood ul li.views-row-12, .view-latest-of-norwood ul li.views-row-16, .view-latest-of-norwood ul li.views-row-20, .view-latest-of-norwood ul li.views-row-24, .view-hubs-of-norwood ul li.views-row-4 {
+	margin-right:0;
+}
+.view-list-of-norwood ul li .views-field-field-photographs-fid, .view-user-list-of-norwood ul li .views-field-field-photographs-fid, .view-pr-userlist-of-norwood ul li .views-field-field-photographs-fid, .view-latest-of-norwood ul li .views-field-field-photographs-fid, .view-hubs-of-norwood ul li .views-field-field-photographs-fid {
+	height:140px;
+	margin:0 0 10px 0;
+	background-color:#fff;
+}
+.view-list-of-norwood ul li .views-field-field-repeat-period-value .field-content, .view-user-list-of-norwood ul li .views-field-field-repeat-period-value .field-content, .view-pr-userlist-of-norwood ul li .views-field-field-repeat-period-value .field-content, .view-latest-of-norwood ul li .views-field-field-repeat-period-value .field-content {
+	display:inline;
+}
+.view-list-of-norwood ul li .views-field-field-repeat-day-of-week-value .field-content, .view-user-list-of-norwood ul li .views-field-field-repeat-day-of-week-value .field-content, .view-pr-userlist-of-norwood ul li .views-field-field-repeat-day-of-week-value .field-content, .view-latest-of-norwood ul li .views-field-field-repeat-day-of-week-value .field-content {
+	display:inline;
+} 
+.view-list-of-norwood .views-field-title, .view-user-list-of-norwood .views-field-title, .view-pr-user-list-of-norwood .views-field-title, .view-latest-of-norwood .views-field-title, .view-hubs-of-norwood .views-field-title {
+	font-size:1em;
+	margin-bottom:6px;
+}
+.view-list-of-norwood .views-field-title .field-content, .view-user-list-of-norwood .views-field-title .field-content, .view-pr-user-list-of-norwood .views-field-title .field-content, .view-latest-of-norwood .views-field-title .field-content, .view-hubs-of-norwood .views-field-title .field-content {
+	display:block;
+	vertical-align:middle;
+	position:relative;
+}
+.view-list-of-norwood .views-field-title a, .view-user-list-of-norwood .views-field-title a, .view-pr-user-list-of-norwood .views-field-title a, .view-latest-of-norwood .views-field-title a, .view-hubs-of-norwood .views-field-title a {
+	display:table-cell;
+	color:#fff !important;
+	text-decoration:none;
+	background-color:#333;
+	padding:2px 5px;
+	width:130px;
+	height:3em;
+	text-align:center;
+	vertical-align:middle;
+	line-height:1.4em;
+}
+.view-list-of-norwood .views-field-title a:hover, .view-user-list-of-norwood .views-field-title a:hover, .view-pr-user-list-of-norwood .views-field-title a:hover, .view-latest-of-norwood .views-field-title a:hover, .view-hubs-of-norwood .views-field-title a:hover {
+	background-color:#f08b1d !important;
+	text-decoration:none;
+	color:#fff !important;
+}
+
+/*end of list of west norwood*/
+
+/*site panel*/
+
+#panel-a-site {
+}
+
+#panel-a-site .pane-single-node-map {
+	width:360px;
+	float:right;
+	margin-left:20px;
+	margin-bottom:20px;
+	padding-top:2px;
+}
+#panel-a-site .node-content-photographs {
+	clear:both;
+}
+#panel-a-site .node-content-photographs div {
+	display:inline;
+}
+#panel-a-site .node-content-photographs div a {
+	display:inline-block;
+	margin-left:4px;
+	margin-bottom:4px;
+}
+
+.node-title, .node-submitted, .node-content-location, .node-content-opening-hours, .node-content, .node-content-photographs, #panel-a-site .node-content, .node-content-date, .node-contacts, #panel-a-site .node-content-owner-info {
+	margin:0;
+	padding:1em 0 0 0;
+}
+.node-title {
+	padding-top:0;
+}
+.node-content-web, .node-content-email, .node-content-phone {
+	margin:0;
+	padding:0;
+}
+.node-content-location p, .node-content-date p {
+	margin:0;
+	padding:0;
+}
+.node-content-opening-hours .label {
+	display:inline-block;
+	width:86px;
+	margin-right:4px;
+}
+#panel-a-site .node-content {
+	clear:right;
+	float:left;
+	width:360px;
+}
+#panel-a-site .node-hub-page .node-content {
+	clear:none;
+}
+#panel-a-site .node-content-owner-info {
+	clear:right;
+	width:328px;
+	background-color:#f5f5f5;
+	padding:16px 16px 12px 16px;
+	margin:16px 0 16px auto;
+}
+.node-content-owner-info h5 {
+	font-weight:normal;
+}
+.node-content-owner-info p {
+	margin-bottom:0;
+	padding-bottom:4px;
+}
+.node-content-owner-info .label {
+	margin-bottom:2px;
+	/*font-weight:bold;*/
+}
+.node-content-owner-info .profile-info {
+	font-size:0.9em;
+	font-style:normal;
+	font-weight:bold;
+	margin-bottom:4px;
+}
+.node-content-owner-info .future-info, .node-content-owner-info .memories-info {
+	margin-bottom:4px;
+}
+.node-content-owner-info .profile-link {
+	font-size:0.9em;
+	font-style:normal;
+	font-weight:normal;
+	margin-bottom:4px;
+}
+
+#panel-a-site .pane-conversations {
+	margin-top:16px;
+}
+
+.view-conversations {
+}
+.view-conversations .views-field-title {
+	width:260px;
+}
+.view-conversations .views-field-title .comment-count {
+	display:inline-block;
+	margin-top:6px;
+	font-size:0.9em;
+	color:#333;
+}
+.view-conversations .views-field-title .body_text {
+	display:inline-block;
+	margin-top:6px;
+	font-size:0.9em;
+	color:#333;
+}
+.view-conversations .views-field-name {
+	width:140px;
+}
+
+/*end of site panel*/
+
+/*user profile*/ 
+
+#panel-user-profile {
+}
+#panel-user-profile .panel-region-separator {
+	clear:both;
+}
+
+#panel-user-profile .views-field-field-profile-picture-fid {
+	float:right;
+	margin-left:16px;
+	margin-bottom:16px;
+}
+
+#panel-user-profile .field-content {
+	/*display:block;
+	margin-bottom:8px;*/
+}
+#panel-user-profile .views-field-edit-node .field-content, #panel-user-profile .views-field-edit-node-1 .field-content {
+	display:inline;
+}
+#panel-user-profile .views-field-body, #panel-user-profile .views-field-field-web-value, #panel-user-profile .views-field-field-twitter-value, #panel-user-profile .views-field-field-blog-value, #panel-user-profile .views-field-field-live-work-value, #panel-user-profile .views-field-field-see-going-on-value, #panel-user-profile .views-field-field-memories-of-west-norwood-value, #panel-user-profile .views-field-field-favourite-thing-value, #panel-user-profile .views-field-field-skills-experince-value {
+	width:420px;
+	margin:0;
+	padding:1em 0 0 0;
+}
+#panel-user-profile .views-field-body, #panel-user-profile .views-field-field-see-going-on-value, #panel-user-profile .views-field-field-favourite-thing-value, #panel-user-profile .views-field-field-web-value, #panel-user-profile .views-field-field-blog-value, #panel-user-profile .views-field-field-twitter-value, #panel-user-profile .views-field-field-memories-of-west-norwood-value {
+	padding:0;
+}
+#panel-user-profile .view-user-list-of-norwood .views-field-body, #panel-user-profile .view-user-list-of-norwood .views-field-title, #panel-user-profile .view-user-list-of-norwood .views-field-type, #panel-user-profile .view-pr-user-list-of-norwood .views-field-body, #panel-user-profile .view-pr-user-list-of-norwood .views-field-title, #panel-user-profile .view-pr-user-list-of-norwood .views-field-type  {
+	width:auto;
+}
+label.views-label-field-web-value, label.views-label-field-twitter-value {
+	display:inline-block;
+	margin-right:2px;
+}
+.views-field-field-web-value .field-content, .views-field-field-twitter-value .field-content {
+	display:inline;
+}
+.views-field-field-live-work-value .field-content {
+	display:block;
+}
+.pane-user-list-of-norwood, .pane-pr-user-list-of-norwood {
+	margin-top:20px;
+}
+
+
+/*end of user profile*/
+
+/*members directory*/
+
+#panel-members-directory{
+}
+
+/*.view-Members {
+	font-size:0.9em;
+	line-height:1.5em;
+}*/
+.view-Members  {
+	margin:20px 0 0 0;
+	width:740px;
+	font-size:0.9em;
+	line-height:1.5em;
+}
+.view-Members .item-list {
+	clear:both;
+}
+
+.view-Members ul {
+	display:block;
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+
+.view-Members ul li {
+	display:block;
+	float:left;
+	width:140px !important;
+	margin:0 30px 12px 30px;
+	padding:0;
+	list-style-type:none;
+}
+.view-Members ul li.views-row-1, .view-Members ul li.views-row-5, .view-Members ul li.views-row-9, .view-Members ul li.views-row-13, .view-Members ul li.views-row-17, .view-Members ul li.views-row-21 {
+	margin-left:0;
+	clear:both;
+}
+.view-Members ul li.views-row-4, .view-Members ul li.views-row-8, .view-Members ul li.views-row-12, .view-Members ul li.views-row-16, .view-Members ul li.views-row-20, .view-Members ul li.views-row-24 {
+	margin-right:0;
+}
+.view-Members .views-field-field-profile-picture-fid {
+	height:140px;
+	margin-bottom:16px;
+}
+.view-Members .views-field-name {
+	font-size:1em;
+}
+.view-Members .views-field-name a {
+	display:table-cell;
+	color:#fff !important;
+	text-decoration:none;
+	background-color:#333;
+	padding:2px 5px;
+	width:130px;
+	height:3em;
+	text-align:center;
+	vertical-align:middle;
+}
+.view-Members .views-field-name a:hover {
+	background-color:#f08b1d !important;
+	text-decoration:none;
+	color:#fff !important;
+}
+/*end of members directory*/
+
+/*blog entry*/
+
+.node-content-back-to-blog {
+	margin:14px 0 14px 0;
+}
+
+.node-story {
+	margin-bottom:32px;
+}
+
+.node-story .node-content-photographs {
+	float:right;
+	width:340px;
+	margin:16px 0 0 32px;
+	padding:0;
+}
+.node-story .node-content-photographs img {
+	display:block;
+	margin:0 0 12px 0;
+}
+.node-story .node-content {
+	width:360px;
+	/*float:left;*/
+	clear:none !important;
+}
+
+.node h1.page-title {
+	margin-bottom:0;
+	padding-bottom:0;
+}
+
+.node-story .node-submitted {
+	/*float:left;*/
+}
+.node-post-date {
+	margin:0 0 0 auto;
+	padding-top:1em;
+	text-align:right;
+	font-style:italic;
+}
+
+/*end of blog entry*/
+
+/*blog page*/
+
+#panel-blog {
+	margin-top:1em;
+}
+#panel-blog .views-row {
+	position:relative;
+	margin-bottom:16px;
+	padding-bottom:16px;
+	border-bottom:1px solid #ccc;
+}
+#panel-blog .views-row-last {
+	border:none !important;
+}
+#panel-blog .views-field-field-photographs-fid {
+	float:right;
+	width:340px;
+	margin:16px 0 0 32px;
+	padding:0;
+}
+#panel-blog .views-field-field-photographs-fid img {
+	display:block;
+	margin:0 0 12px 0;
+}
+#panel-blog .views-field-title {
+}
+#panel-blog .views-field-created, #panel-blog .views-field-body, #panel-blog .views-field-view-node {
+	width:360px;
+	clear:none !important;
+}
+#panel-blog .views-field-body {
+	margin-top:12px;
+}
+#panel-blog .views-field-body p {
+	/*margin:0;
+	padding:0;*/
+}
+#panel-blog .views-field-title {
+	/*float:left;
+	margin:0 16px 6px 20px;*/
+}
+#panel-blog .views-field-title a {
+	
+}
+#panel-blog .views-field-title a:hover {
+	background-color:#7C7067 !important;
+	color:#fff !important;
+	text-decoration:none;
+}
+#panel-blog .views-field-created {
+	padding-top:4px;
+	margin-bottom:6px;
+	text-align:right;
+	font-size:0.9em;
+	font-style:italic;
+}
+#panel-blog .views-field-view-node {
+	position:absolute;
+	left:0;
+	bottom:10px;
+	font-size:1em;
+	margin-bottom:6px;
+}
+#panel-blog .views-field-view-node a {
+	display:inline-block;
+	color:#f08b1d !important;
+	text-decoration:none;
+	background-color:#e6e6e6;
+	padding:2px 5px;
+	text-align:center;
+}
+#panel-blog .views-field-view-node a:hover {
+	background-color:#7C7067 !important;
+	color:#fff !important;
+	text-decoration:none;
+}
+#panel-blog .comment_forbidden {
+	display:none;
+}
+#panel-blog .views-field-field-html-code-value {
+	margin-bottom:22px;
+}
+
+/*end of blog page*/
+
+/*drupal forms*/
+
+.form-item {
+	margin-bottom:10px;
+}
+.fieldset {
+	margin-bottom:20px;
+}
+.node-form {
+	margin-top:16px;
+}
+.node-form label, .node-form strong, .node-form .fieldset-title {
+	color:#000;
+	font-weight:bold;
+}
+.node-form tr.odd {
+	background-color:transparent;
+}
+.node-form table {
+	border:1px solid #eee;
+}
+.node-form thead {
+	background-color:#e2e2e2;
+	border-bottom:none;
+}
+#edit-title-wrapper label{
+	width:auto;
+	display:inline-block;
+	margin-right:4px;
+}
+#edit-title {
+	display:inline-block;
+	width:600px;
+}
+	
+
+/*gmap on form */
+
+#gmap-auto1map-locpick_latitude0-wrapper, #gmap-auto1map-locpick_longitude0-wrapper {
+	display:none;
+}
+#edit-locations-0-name-wrapper label {
+	width:auto;
+	margin-right:16px;
+}
+#edit-locations-0-name-wrapper input {
+	width:620px;
+}
+.location-current-coordinates-fieldset {
+	display:none;
+}
+
+/*end of gmap on form*/
+
+/*event form*/
+
+.group-date-group .container-inline-date {
+	width:auto;
+	float:left;
+	margin:0 auto 0 auto;
+}
+
+#edit-field-repeat-period-value-wrapper {
+	width:auto;
+	float:left;
+	margin:0 18px 0 30px;
+}
+#edit-field-repeat-day-of-week-value-wrapper {
+	width:auto;
+	margin:0 0 0 auto;
+}
+#edit-field-time-0-value-wrapper {
+	float:left;
+	width:150px;
+	margin:-16px auto auto auto;
+	clear:none !important;
+}
+#edit-field-time-0-value2-wrapper {
+	margin:-64px auto 0 180px;
+	width:150px;
+	clear:none !important;
+}	
+
+#edit-field-time-0-value-wrapper label, #edit-field-time-0-value2-wrapper label  {
+	float:left;
+	width:auto;
+	margin-right:16px;
+	font-weight:normal;
+}
+
+#edit-field-time-0-value-wrapper input, #edit-field-time-0-value2-wrapper input {
+	width:80px !important;
+	min-width:80px !important;
+	display:inline-block;*/
+}
+.time-wrapper {
+	width:300px;
+	margin-top:0;
+}
+.time-wrapper .fieldset-title {
+	float:left;
+	width:40px;
+	margin:0;
+	padding:0;
+	background-color:transparent;
+}
+.time-wrapper .fieldset-content {
+	border:0;
+	width:auto;
+	margin:0 auto 0 64px;
+	padding:0;
+	clear:none !important;
+}
+
+.or-sep {
+	width:auto;
+	float:left;
+	margin:0 12px auto 34px;
+	padding-top:34px;
+	font-size:2em;
+}
+#edit-field-repeat-day-of-week-value-wrapper label {
+	display:none;
+}
+#edit-field-repeat-period-value-wrapper label {
+	float:left;
+	width:180px;
+	margin-right:16px;
+}
+#edit-field-repeat-period-value-wrapper .description {
+	width:180px;
+	margin-top:-84px !important;
+}
+
+/*end of event form*/
+
+/*opening hours dates*/
+
+.group-openinghours {
+	position:relative;
+	clear:both;
+}
+
+.group-openinghours .fieldset-content .container-inline-date {
+	float:left;
+	width:200px;
+	margin-right:16px;
+	clear:none !important;
+}
+.group-openinghours .fieldset-content .container-inline-date label {
+	float:left;
+	width:auto;
+	margin-right:16px;
+	font-weight:normal;
+}
+.group-openinghours .fieldset-content .container-inline-date input {
+	width:80px !important;
+	min-width:80px !important;
+	display:inline-block;*/
+}
+#edit-field-open-monday-0-value2-wrapper {
+}
+#edit-field-open-tuesday-0-value2-wrapper {
+}
+#edit-field-open-wednesday-0-value2-wrapper {
+}
+#edit-field-open-thursday-0-value2-wrapper {
+}
+#edit-field-open-friday-0-value2-wrapper {
+}
+#edit-field-open-saturday-0-value2-wrapper {
+}
+#edit-field-open-sunday-0-value2-wrapper {
+}
+.group-openinghours .fieldset-content .fieldset-title {
+	float:left;
+	width:140px;
+	margin:0;
+	padding:0;
+	background-color:transparent;
+}
+.group-openinghours .fieldset-content .fieldset-content {
+	border:0;
+	width:540px;
+	margin:0 auto 0 160px;
+	padding:0;
+	clear:none !important;
+}
+.group-openinghours .fieldset-content .fieldset-content .description {
+	display:none;
+}
+#edit-field-open-sunday-0-value2-date-wrapper .description {
+	display:block;
+	width:100px;
+	position:absolute;
+	top:42px;
+	right:8px;
+}
+/*end of opening hours dates*/
+
+/*email and phone fields*/
+
+input#edit-field-bus-email-0-value {
+	width:300px;
+	min-width:300px;	
+}
+input#edit-field-bus-phone-0-value  {
+	width:140px;
+	min-width:140px;
+}
+input#edit-field-bus-web-0-value {
+	width:300px;
+	min-width:300px;
+}
+#edit-field-bus-email-0-value-wrapper {
+	width:370px;
+	float:left;
+	clear:none !important;
+}
+#edit-field-bus-phone-0-value-wrapper {
+	width:auto;
+	margin-left:420px;
+	clear:none !important;
+}
+#edit-field-bus-web-0-value-wrapper {
+	width:640px;
+	clear:both !important;
+}
+#edit-field-bus-email-0-value-wrapper label, #edit-field-bus-phone-0-value-wrapper label, #edit-field-bus-web-0-value-wrapper label {
+	width:40px;
+	margin-right:16px;
+	margin-top:4px;
+	float:left;
+}
+#edit-field-bus-phone-0-value-wrapper label {
+	width:auto;
+}
+
+/*end of email and phone fields*/
+
+/*comments*/
+
+#comments {	
+	position:relative;
+	min-height:500px;
+	/*width:480px;
+	margin-left:130px;
+	margin-right:130px;*/
+	padding:24px 130px 24px 130px;
+	background-color:#f5f5f5;
+}
+#comments .comment {
+	width:340px;
+	/*float:left;*/
+	margin:0;
+	border:none;
+	padding:1em 0 1em 0;
+}
+#comment-form {
+}
+#comment-form label {
+	color:#000;
+	display:inline-block;
+	width:100px;
+}
+
+#comment-form #edit-comment-wrapper label {
+	display:block;
+}
+
+#comments .box {
+	/*position:absolute;*/
+	/*width:340px;*/
+	/*top:0;
+	right:0;*/
+}
+.comment .comment_forbidden {
+	display:none !important;
+}
+
+/*end of comments*/
+
+/*conversations*/
+
+.node-content-site-attach {
+	margin:14px -200px 14px 0;
+	z-index:10;
+}
+#panel-a-conversation .pane-content #comments {
+	min-height:0;
+	padding:0;
+	background-color:transparent
+}
+#panel-a-conversation {
+	position:relative;
+	min-height:740px;
+}
+#panel-a-conversation .pane-node-content {
+	width:340px;
+}
+#panel-a-conversation .pane-node-comments {
+	width:340px;;
+}
+#panel-a-conversation .pane-node-comment-form {
+	position:absolute;
+	top:114px;
+	right:0;
+	width:340px;
+}
+#panel-a-conversation .pane-node-comments .comment_forbidden {
+	display:none !important;
+}
+#edit-notify-wrapper label, #edit-notify-type-1-wrapper label, #edit-notify-type-2-wrapper label, #edit-fbconnect-feed-wrapper label {
+	width:auto;
+}
+#edit-notify-type-1-wrapper {
+	margin-left:0;
+}
+
+/*end of conversations*/
+
+/*user login/register*/
+
+#user-register, #user-login, #user-pass {
+	margin-top:16px;
+}
+#user-register label, #user-login label {
+	margin-top:16px;
+	display:inline-block;
+	width:140px;
+	color:#000;
+}
+#user-pass label {
+	margin-top:16px;
+	display:inline-block;
+	width:220px;
+	color:#000;
+}
+#user-register .group-profile-questions label {
+	display:block;
+	width:auto;
+}
+/*#user-register #edit-title-wrapper label {
+	width:400px;
+}*/
+#user-register label, #user-register #edit-title-wrapper label {
+	display:inline-block;
+	width:220px;
+	margin-right:0;
+}
+#user-register #edit-title-wrapper input.form-text {
+	width:240px;
+}
+/*end of user login/register*/
+
+/*pager*/
+
+.pager {
+	text-align:center;
+}
+.pager li {
+	padding:0 8px 0 8px !important;
+	margin:0;
+	width:auto;
+}
+.pager li a {
+}
+.view-Members ul.pager li, .view-list-of-norwood ul.pager li {
+	width:auto !important;
+	margin:0 !important;
+}
+
+/*end of pager*/
+
+.acc-hide {
+	display:none;
+}
+/*mailchimp form*/
+
+#mc_embed_signup {
+	font-size:1.2em !important;
+}
+.mc-field-group {
+	font-size:1.2em !important;
+}
+#mc-embedded-subscribe {
+	font-size:1.4em !important;
+}
+
+/*end of mailchimp form*/
+
+/*graphical buttons*/
+
+a.volunteerButton {
+	display:inline-block;
+	width:307px;
+	height:90px;
+	background:transparent url(../images/volunteer_button.png) no-repeat 0 0;
+}
+a.volunteerButton:hover {
+	background-position:0 -90px;
+}
+a.volunteerButton span {
+	display:none;
+}
+
+/*end of graphical buttons*/

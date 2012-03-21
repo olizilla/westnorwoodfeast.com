@@ -1,0 +1,149 @@
+<?php
+// $Id: statcounter.module,v 1.1.4.1 2008/02/19 20:34:23 boombatower Exp $
+/**
+ * @file
+ * Provides an integration with StatCounter which logs user activity.
+ *
+ * Copyright 2008 by Jimmy Berry ("boombatower", http://drupal.org/user/214218)
+ */
+
+/**
+ * Implementation of hook_help().
+ */
+function statcounter_help($section = "admin/help#statcounter", $arg) {
+  $output = '';
+  switch ($section) {
+    case 'admin/help#statcounter':
+      $output = t('<p>The StatCounter module provides an integration of StatCounter for Drupal. The
+        module allows you to insert tracking code on pages within the specific scope. For more detialed
+        instructions please visit the StatCounter settings and read the instructions on that page.</p>
+        <p>If you would like to change the location of the code on the page goto
+        <a href="'. base_path() .'admin/build/block">admin/build/block</a> and change the location of the "StatCounter"
+        block.</p>');
+      break;
+    case 'admin/settings/statcounter':
+      $output = t('<p>To setup a StatCounter project with the integration module please visit
+        <a href="http://statcounter.com">http://statcounter.com</a> and perform the following setups:</p>
+        <ol>
+          <li>Login to your account.</li>
+          <li>Create the project to be used if you haven\'t already.</li>
+          <li>Click on the wrench icon for that project.</li>
+          <li>Click "Install Code."</li>
+          <li>Setup the code the way you prefer, but on the "Installation Options" screen select
+            "No, I want the default install guide" instead of "Yes, I use."</li>
+          <li>Copy the code in the textarea and paste it into the textarea below labled code.</li>
+          <li>Set the scope.</li>
+          <li>Goto the <a href="'. base_path() .'/admin/build/block">Blocks</a> page and set the StatCounter block to
+          region you would like it to display in.</li>
+        </ol>');
+      break;
+  }
+
+  return $output;
+}
+
+/**
+ * Implementation of hook_menu().
+ */
+function statcounter_menu() {
+  $items = array();
+  $items['admin/settings/statcounter'] = array(
+    'title' => t('StatCounter'), 
+    'description' => t('Configure StatCounter integration.'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('statcounter_settings'),
+    'access callback' => 'user_access',
+    'access arguments' => array('administer statcounter'),
+  );
+  return $items;
+}
+
+/**
+ * Implementation of hook_perm().
+ */
+function statcounter_perm() {
+  return array('administer statcounter'); 
+}
+
+/**
+ * Implementation of hook_block().
+ */
+function statcounter_block($op = 'list', $delta = 0, $edit = array()) {
+  switch ($op) {
+    case 'list':
+      $blocks = array();
+      $blocks[0]['info'] = t('StatCounter');
+      return $blocks;
+    case 'configure':
+      return array();
+    case 'save':
+      return;
+    case 'view': default:
+      if (statcounter_display()) {
+        $block = array();
+        $block['content'] = variable_get('statcounter_code', '');
+        return $block;
+      }
+  }
+}
+
+/**
+ * Check to see if the StatCounter code should be added to the page.
+ */
+function statcounter_display() {
+  if (variable_get('statcounter_code', '') != '') {
+    switch (variable_get('statcounter_scope', 'home')) {
+      case 'all':
+        return TRUE;
+      case 'user':
+        return (strpos(substr(statcounter_get_url(), 0, 5), 'admin') === FALSE);
+      case 'admin':
+        return (strpos(substr(statcounter_get_url(), 0, 5), 'admin') !== FALSE);
+      case 'home':
+        return (statcounter_get_url() == 'home');
+    }
+  }
+  return FALSE;
+}
+
+/**
+ * Get the url to be used with for checking.
+ */
+function statcounter_get_url() {
+  if (isset($_GET['q'])) {
+    return ($_GET['q'] == variable_get('site_frontpage', 'node') ? 'home' : $_GET['q']);
+  }
+  return 'unknown';
+}
+
+/**
+ * Create the setting form.
+ */
+function statcounter_settings() {
+  $from = array();
+  $form['general'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('General'),
+    '#description' => t('General setup information.'));
+  $form['general']['statcounter_code'] = array(
+    '#type' => 'textarea',
+    '#rows' => '12',
+    '#title' => t('Code'),
+    '#description' => t('Place the StatCounter code that will be inserted on pages within the specified scope.'),
+    '#default_value' => variable_get('statcounter_code', '')
+  );
+  $form['general']['statcounter_scope'] = array(
+    '#type' => 'radios',
+    '#title' => t('Scope'),
+    '#description' => t('The pages that the StatCounter code will be inserted on.'),
+    '#default_value' => variable_get('statcounter_scope', 'home'),
+    '#options' => array(
+      'all' => t('All pages'),
+      'user' => t('Non-admin pages'),
+      'admin' => t('Admin pages'),
+      'home' => t('Home page'),
+    )
+  );
+
+  return system_settings_form($form);
+}

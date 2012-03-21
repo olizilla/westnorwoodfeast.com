@@ -1,0 +1,231 @@
+<?php
+// $Id: counter.install,v 1.9 2010/04/06 06:32:01 thenicespider Exp $
+/**
+ * Install the module with a new database table
+ * @file
+ */
+
+function counter_install() {
+  drupal_set_message('Installing Counter module');
+  drupal_install_schema('counter');
+  counter_update_6000();
+  counter_update_6001();
+  counter_update_6002();
+  counter_update_6003();
+  counter_update_6005();
+}
+
+function counter_uninstall() {
+  drupal_uninstall_schema('counter');
+}
+
+/**
+ * Implementation of hook_schema().
+ */
+function counter_schema() {
+  $schema['counter'] = array(
+    'fields' => array(
+      'counter_id' => array(
+        'type' => 'serial',
+        'not null' => TRUE,
+      ),
+      'counter_ip' => array(
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'counter_date' => array(
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'counter_page' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '0',
+      ),
+    ),
+    'primary key' => array('counter_id'),
+  );
+  
+  $schema['counter_today'] = array(
+    'fields' => array(
+      'counter_id' => array(
+        'type' => 'serial',
+        'not null' => TRUE,
+      ),
+      'counter_ip' => array(
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'counter_date' => array(
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'counter_page' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '0',
+      ),
+    ),
+    'primary key' => array('counter_id'),
+  );
+  
+  $schema['counter_data'] = array(
+    'fields' => array(
+      'counter_name'  => array('type' => 'varchar','length' => 255,'not null' => TRUE,'default' => 0),
+      'counter_value' => array('type' => 'varchar','length' => 255,'not null' => TRUE,'default' => 0),
+    ),
+    'primary key' => array('counter_name'),
+  );
+  // site_counter, unique_visitor, registered_user, unregistered_user, published_node, unpublished_node 
+  return $schema;
+}
+
+function counter_update_6000() {
+  $ret = array();
+  
+  if (db_column_exists('counter', 'counter_page')) {
+    db_change_field($ret, 'counter', 'counter_page', 'counter_page', array('type' => 'varchar', 'length' => '255','not null' => TRUE, 'default' => '0'));
+  }    
+  return $ret;
+}
+
+function counter_update_6001() {
+  $ret = array();
+  $schema = counter_schema();
+  _drupal_initialize_schema('counter', $schema);
+  
+  foreach ($schema as $name => $table) {
+    if (!db_table_exists($name)) { 
+      db_create_table($ret, $name, $table);
+    }
+  }
+  //site_counter
+  $sql = " SELECT count(*) as total FROM {counter} c ";
+  $data = db_fetch_object(db_query($sql));
+	$counter_total = $data->total;
+	
+	$sql = " SELECT count(*) as total FROM {counter_data} WHERE counter_name= 'site_counter' ";
+  $counter_data = db_fetch_object(db_query($sql));
+	$counter_name_exist = $counter_data->total;
+	
+	if (!$counter_name_exist) {
+    $sql = " INSERT INTO {counter_data} (counter_name,counter_value) VALUES ('%s','%s')";             
+    $results = db_query($sql,"site_counter",$counter_total);    
+  }
+	//unique_visitor
+  $sql = " SELECT count(*) as total FROM (SELECT counter_ip FROM {counter} GROUP BY counter_ip) c";
+  $data = db_fetch_object(db_query($sql));
+	$counter_total = $data->total;
+	
+	$sql = " SELECT count(*) as total FROM {counter_data} WHERE counter_name= 'unique_visitor' ";
+  $counter_data = db_fetch_object(db_query($sql));
+	$counter_name_exist = $counter_data->total;
+	
+	if (!$counter_name_exist) {
+    $sql = " INSERT INTO {counter_data} (counter_name,counter_value) VALUES ('%s','%s')";             
+    $results = db_query($sql,"unique_visitor",$counter_total);    
+  }	
+  //registered_user
+  $sql = " SELECT count(*) as total FROM {users} WHERE access<>0 and uid<>0";
+  $data = db_fetch_object(db_query($sql));
+	$counter_total = $data->total;
+	
+	$sql = " SELECT count(*) as total FROM {counter_data} WHERE counter_name= 'registered_user' ";
+  $counter_data = db_fetch_object(db_query($sql));
+	$counter_name_exist = $counter_data->total;
+	
+	if (!$counter_name_exist) {
+    $sql = " INSERT INTO {counter_data} (counter_name,counter_value) VALUES ('%s','%s')";             
+    $results = db_query($sql,"registered_user",$counter_total);    
+  }
+  //unregistered_user
+  $sql = " SELECT count(*) as total FROM {users} WHERE access=0 and uid<>0";
+  $data = db_fetch_object(db_query($sql));
+	$counter_total = $data->total;
+	
+	$sql = " SELECT count(*) as total FROM {counter_data} WHERE counter_name= 'unregistered_user' ";
+  $counter_data = db_fetch_object(db_query($sql));
+	$counter_name_exist = $counter_data->total;
+	
+	if (!$counter_name_exist) {
+    $sql = " INSERT INTO {counter_data} (counter_name,counter_value) VALUES ('%s','%s')";             
+    $results = db_query($sql,"unregistered_user",$counter_total);    
+  }
+  //published_node
+  $sql = " SELECT count(*) as total FROM {node} WHERE status=1";
+  $data = db_fetch_object(db_query($sql));
+	$counter_total = $data->total;
+	
+	$sql = " SELECT count(*) as total FROM {counter_data} WHERE counter_name= 'published_node' ";
+  $counter_data = db_fetch_object(db_query($sql));
+	$counter_name_exist = $counter_data->total;
+	
+	if (!$counter_name_exist) {
+    $sql = " INSERT INTO {counter_data} (counter_name,counter_value) VALUES ('%s','%s')";             
+    $results = db_query($sql,"published_node",$counter_total);    
+  }
+  //unpublished_node
+  $sql = " SELECT count(*) as total FROM {node} WHERE status=0";
+  $data = db_fetch_object(db_query($sql));
+	$counter_total = $data->total;
+	
+	$sql = " SELECT count(*) as total FROM {counter_data} WHERE counter_name= 'unpublished_node' ";
+  $counter_data = db_fetch_object(db_query($sql));
+	$counter_name_exist = $counter_data->total;
+	
+	if (!$counter_name_exist) {
+    $sql = " INSERT INTO {counter_data} (counter_name,counter_value) VALUES ('%s','%s')";             
+    $results = db_query($sql,"unpublished_node",$counter_total);    
+  }
+  return $ret;
+}  
+
+function counter_update_6002() {
+  $ret = array();
+  
+  //blocked_user
+  $sql = " SELECT count(*) as total FROM {users} WHERE status=0 and uid<>0";
+  $data = db_fetch_object(db_query($sql));
+	$counter_total = $data->total;
+	
+	$sql = " SELECT count(*) as total FROM {counter_data} WHERE counter_name= 'blocked_user' ";
+  $counter_data = db_fetch_object(db_query($sql));
+	$counter_name_exist = $counter_data->total;
+	
+	if (!$counter_name_exist) {
+    $sql = " INSERT INTO {counter_data} (counter_name,counter_value) VALUES ('%s','%s')";             
+    $results = db_query($sql,"blocked_user",$counter_total);    
+  }
+}    
+    
+function counter_update_6003() {
+  $ret = array();    
+  
+  db_add_index($ret, 'counter', 'counter_date', array('counter_date'));
+  db_add_index($ret, 'counter', 'counter_ip', array('counter_ip')); 
+  return $ret;  
+}
+
+function counter_update_6005() {
+  $ret = array();
+  $schema = counter_schema();
+  _drupal_initialize_schema('counter', $schema);
+  
+  foreach ($schema as $name => $table) {
+    if (!db_table_exists($name)) { 
+      db_create_table($ret, $name, $table);
+    }
+  }
+  
+  return $ret;
+}

@@ -1,0 +1,15 @@
+; $Id: clean_dark.info,v 1.1.2.1.2.2 2010/03/14 10:48:58 psynaptic Exp $
+
+name = Clean Dark
+description = Dark version of Clean theme.
+base theme = clean
+core = 6.x
+engine = phptemplate
+stylesheets[all][] = css/color.css
+
+; Information added by drupal.org packaging script on 2010-04-22
+version = "6.x-2.0-beta3"
+core = "6.x"
+project = "clean"
+datestamp = "1271896505"
+

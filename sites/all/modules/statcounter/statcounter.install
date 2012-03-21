@@ -1,0 +1,16 @@
+<?php
+// $Id: statcounter.install,v 1.1 2008/02/12 23:52:39 boombatower Exp $
+/**
+ * @file
+ * Provides an integration with StatCounter which logs user activity.
+ *
+ * Copyright 2008 by Jimmy Berry ("boombatower", http://drupal.org/user/214218)
+ */
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function statcounter_uninstall() {
+  variable_del('statcounter_code');
+  variable_del('statcounter_scope');
+}

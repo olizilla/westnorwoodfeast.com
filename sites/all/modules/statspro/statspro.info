@@ -1,0 +1,14 @@
+; $Id: statspro.info,v 1.4.2.3.2.4 2010/06/18 18:19:51 rsevero Exp $
+
+name = "Statistics Pro"
+description = "Statistics for nodes, comments, users and lots more"
+dependencies[] = views
+core = 6.x
+php = 5.1
+
+; Information added by drupal.org packaging script on 2010-11-05
+version = "6.x-2.3"
+core = "6.x"
+project = "statspro"
+datestamp = "1288998359"
+
