@@ -84,6 +84,9 @@ body {
 #content {
 	width:740px !important;
 }
+.no-sidebars #content {
+	width:940px !important;
+}
 
 #base-blocks {
 }

@@ -84,6 +84,9 @@ body {
 #content {
 	width:740px !important;
 }
+.no-sidebars #content {
+	width:960px !important;
+}
 
 #base-blocks {
 }
@@ -557,6 +560,7 @@ th a:link, th a:visited {
 /*brand logos at bottom*/
 
 #brandlogos {
+	display:none;
 	margin-bottom:20px;
 	text-align:right;
 	height:80px;
