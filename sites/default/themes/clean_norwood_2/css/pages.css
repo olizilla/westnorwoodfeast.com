@@ -81,6 +81,18 @@
 	display:inline;
 	float:none;
 }
+#pane-home #block-block-3 {
+	margin-top:24px;
+}
+#pane-home #block-block-3 label {
+	display:block;
+}
+#pane-home #block-block-3 ul {
+	display:none;
+}
+#pane-home #block-block-3 ul li label {
+	display:inline-block;
+}
 /*end of home panels*/
 
 /*map of west norwood*/
