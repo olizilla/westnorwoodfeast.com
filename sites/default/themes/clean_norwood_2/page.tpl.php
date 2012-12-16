@@ -1,6 +1,6 @@
 <?php // $Id: page.tpl.php,v 2.0 2011/09/29 19:00:00 andyb Exp $ ?>
 <?php 
-	$curr_url = 'http://westnorwood.spacemakers.org.uk'.request_uri();
+	$curr_url = 'http://westnorwoodfeast.com'.request_uri();
 	$curr_url_enc = check_plain($curr_url);
 	global $user;
 	$is_admin = false;
@@ -116,7 +116,6 @@
 		<div id="content">
 			<?php print $tabs ?>
 			<?php if ($is_front): ?>
-				<h1 class="page-title home-title">Be part of the West Norwood Feast</h1>
 			<?php elseif ((arg(0) == 'map' || $type == 'business' || $type == 'shop' || $type == 'event' || $type == 'organisation') && arg(2)!= 'edit'): ?>
 				<h1 class="page-title">What's Going on in West Norwood?</h1>
 			<?php elseif (arg(0) == 'market' || $type == 'hub'): ?>

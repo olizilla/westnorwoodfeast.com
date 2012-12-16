@@ -76,16 +76,35 @@
 }
 #pane-home #block-block-1 ul {
 	width:auto;
+	text-align:center;
 }
 #pane-home #block-block-1 ul li {
 	display:inline;
 	float:none;
 }
+#pane-home #block-block-1 ul li a {
+	display:inline-block;
+	text-align:left;
+	width:106px;
+	margin:0 1px;
+}
 #pane-home #block-block-3 {
-	margin-top:24px;
+}
+#pane-home #block-block-3 h2.block-title {
+	margin-bottom:21px;
+}
+#pane-home #block-block-3 .form-line {
+	margin-bottom:12px;
 }
 #pane-home #block-block-3 label {
-	display:block;
+	display:inline-block;
+	width:140px;
+}
+#pane-home #block-block-3 input.form-text {
+	width:300px;
+}
+#pane-home #block-block-3 input.form-submit {
+	margin-left:144px;
 }
 #pane-home #block-block-3 ul {
 	display:none;
@@ -93,6 +112,57 @@
 #pane-home #block-block-3 ul li label {
 	display:inline-block;
 }
+
+#pane-home #block-views-next_feast-default, #pane-home #block-block-4, #pane-home #block-block-5, #pane-home #block-block-8 {
+	width:290px;
+	height:68px;
+	float:left;
+	padding:10px;
+	background-color:#97b25f;
+	color:#fff;
+	text-align:center;
+}
+#pane-home #block-block-4, #pane-home #block-block-5 {
+	background-color:#7C7067;
+}
+#pane-home #block-block-8 {
+	background-color:#d2ca47;
+}
+#pane-home #block-views-next_feast-default { 
+	margin-right:15px;
+}
+#pane-home #block-block-5 {
+	float:right;
+	margin-right:0;
+}
+#pane-home #block-views-next_feast-default h2.block-title, .front #block-block-4 h2.block-title, .front #block-block-5 h2.block-title, .front #block-block-8 h2.block-title {
+	color:#fff;
+}
+#pane-home #block-views-next_feast-default .date-display-start {
+	display:inline-block;
+}
+#pane-home #block-block-4 a, #pane-home #block-block-5 a, #pane-home #block-block-8 a {
+	display:block;
+	font-size:17px;
+	color:#fff;
+	margin:-10px;
+	padding:22px 15px;
+	width:280px;
+	height:44px;
+}
+#pane-home #block-block-4 a:hover, #pane-home #block-block-5 a:hover, #pane-home #block-block-8 a:hover {
+	background-color:#F08B1D;
+	color:#fff !important;
+}
+
+#pane-home .pane-latest-blog {
+}
+#pane-home .pane-latest-blog .views-field-title {
+	margin-bottom:24px;
+	height:21px;
+	overflow:visible;
+}
+
 /*end of home panels*/
 
 /*map of west norwood*/
