@@ -1,5 +1,0 @@
-# let's keep the secrets secret
-sites/default/settings.php
-# no need to sync files, these are just web uploads
-sites/default/files
-
